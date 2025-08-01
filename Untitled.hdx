@@ -1,0 +1,70 @@
+{
+  "width" : 20,
+  "unit" : 0,
+  "building" : {
+    "roofs" : [
+
+    ],
+    "stories" : [
+      {
+        "dimensions" : [
+
+        ],
+        "holes" : [
+
+        ],
+        "furs" : [
+
+        ],
+        "floorThick" : 0.10000000000000001,
+        "walls" : [
+
+        ],
+        "outterWallMaterial" : {
+          "scale" : 1,
+          "rotation" : 0,
+          "content" : "$Siding AI 01A Red"
+        },
+        "wallFrameMaterial" : {
+          "content" : "#808080",
+          "scale" : 1,
+          "rotation" : 0
+        },
+        "joints" : [
+
+        ],
+        "height" : 3,
+        "roofs" : [
+
+        ],
+        "frames" : [
+
+        ],
+        "rooms" : [
+
+        ]
+      }
+    ]
+  },
+  "precision" : 0,
+  "template" : {
+    "frame" : [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "floorMaterial" : {
+    "content" : "$Wood Floor Dark",
+    "scale" : 1,
+    "rotation" : 0
+  },
+  "wallThick" : 0.20000000000000001,
+  "version" : 2,
+  "height" : 20
+}
