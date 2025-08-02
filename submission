@@ -1,0 +1,503 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "02a1cca6-0e3d-4082-83aa-723178faeb2f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "    cars  passings\n",
+      "0    BMW         3\n",
+      "1  volvo         7\n",
+      "2   ford         2\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "mydataset={\n",
+    "    'cars':['BMW','volvo','ford'],\n",
+    "    'passings':[3,7,2]\n",
+    "    \n",
+    "}\n",
+    "myvar=pd.DataFrame(mydataset)\n",
+    "print(myvar)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "691bfcfb-1c4a-42d7-922d-3d7e99a4d5c0",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (1352170144.py, line 2)",
+     "output_type": "error",
+     "traceback": [
+      "  \u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[2]\u001b[39m\u001b[32m, line 2\u001b[39m\n\u001b[31m    \u001b[39m\u001b[31mcalories=m{'day1':100,'day2':200,'day3':300}\u001b[39m\n              ^\n\u001b[31mSyntaxError\u001b[39m\u001b[31m:\u001b[39m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "calories=m{'day1':100,'day2':200,'day3':300}\n",
+    "myvar=pd.Series(calories)\n",
+    "print(myvar)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f77cd4c3-1e06-47f5-bdf6-b16948499667",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd \n",
+    "#url='http://raw.githubusercontent.com/vizydrop/data-samples/master/flowers.csv'\n",
+    "url='http://raw.githubusercontent.com/vizydrop/data-samples/master/flowers.csv'\n",
+    "df=pd.read_csv(url)\n",
+    "print(df)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7cf5c0f3-9b2e-451f-8380-49a6e9a79cdf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "counts=dict()\n",
+    "print('enter text:')\n",
+    "line=input('')\n",
+    "words=line.split()\n",
+    "print('words:',words)\n",
+    "print('counting')\n",
+    "for word in words:\n",
+    "    counts[word]=counts.get(word,0)+1\n",
+    "    print('counts',counts)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "42e287f5-3017-4c48-9404-c27173d2b8ab",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "counts=dict()\n",
+    "print('enter text:')\n",
+    "line=input('')\n",
+    "words=line.split()\n",
+    "print('words:',words)\n",
+    "print('counting')\n",
+    "for word in words:\n",
+    "    counts[word]=counts.get(word,0)+1\n",
+    "    print('counts',counts)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9fd4af65-9a78-409e-8909-c105f00706fc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "counts=dict()\n",
+    "print('enter text:')\n",
+    "line1=input('')\n",
+    "line2=input('')\n",
+    "line3=input('')\n",
+    "a=(line1+line2+line3)\n",
+    "print(a)\n",
+    "words=a.split()\n",
+    "print('words:',words)\n",
+    "for word in words:\n",
+    "    if word == '123456789':\n",
+    "     b=words\n",
+    "     print(b)\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "32ce1222-39c4-42c5-8667-f6e4b2386c71",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "counts=dict()\n",
+    "print('enter text:')\n",
+    "line=input('')\n",
+    "words=line.split()\n",
+    "print('words:',words)\n",
+    "print('counting')\n",
+    "concat_num=''\n",
+    "add=0\n",
+    "for word in words:\n",
+    "    try:\n",
+    "        num=int(word)\n",
+    "        add=add+ int(word)\n",
+    "        concat_num+=word\n",
+    "    except:\n",
+    "        pass\n",
+    "        print('concatenation of the numbers:',concat_num)\n",
+    "        print('addition of the numbers:',add)\n",
+    "        special_chars=['!','@','#','$','&','*']\n",
+    "        \n",
+    "special_found=False\n",
+    "for word in words:\n",
+    "    if word in special_chars:\n",
+    "        special_found=True\n",
+    "        break\n",
+    "    if special_found:\n",
+    "        print('the special characters are found')\n",
+    "    else:\n",
+    "         print('special characters are not found')\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "203d2c61-df67-40ec-bb58-cb72a6c3ce3d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "dict={'first score':[100,90,np.nan,95],'second score':[np.nan,45,56,np.nan],'third score':[np.nan,40,80,98]}\n",
+    "print(dict)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a132a081-3e97-41dc-aba8-d4f21fb03331",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#creating a dataframe from list\n",
+    "df=pd.DataFrame(dict)\n",
+    "print(df.to_string())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b8abeff2-3ebe-47fa-892f-7d933974e03c",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(df.isnull())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "548e35cf-045f-48bb-a2f5-3d367de5eded",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(df.notnull())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a78ed82e-0d78-4a92-b79e-f956087bdffc",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(df.fillna(method=='pad')) #filling a missing value with the previous ones"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "79b744cf-092e-4a01-b85a-d47b22f18330",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df_mean=df.mean()\n",
+    "print(df_mean)\n",
+    "data_new=df.fillna(df.mean())\n",
+    "print(data_new)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eb291c52-3301-4f17-b0d4-912a561c2ed3",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import matplotlib.pyplot as plt\n",
+    "import numpy as np\n",
+    "xaxis=np.array([1,8])\n",
+    "yaxis=np.array([3,10])\n",
+    "plt.plot(xaxis,yaxis)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c7022a19-786c-49ad-8f26-7bc0a2cbd6bb",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c9c233b6-c714-46bd-be96-049b1811d739",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def say_hello():\n",
+    "    print(\"hello,world\")\n",
+    "(say_hello())"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "890d35f6-e245-42e8-aad1-525272ce1c2e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def add(a,b):\n",
+    "    return a+b\n",
+    "result=add(5,3)\n",
+    "print(\"the sum is :\",result)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6c72cfed-744d-48fb-a631-c0eb4eb8dec7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def greet(name='ali'):\n",
+    "    print(\"hello,\"+name+\"!\")\n",
+    "greet()\n",
+    "greet(\"sam\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "feea4831-2271-4607-8da6-017c25bce1f8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def greet(name):\n",
+    "    print(\"hello,\"+name+\"!\")\n",
+    "greet(\"aliva\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2ee040b8-17a0-4721-b41c-95abc7ea60f1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def is_even(number):\n",
+    "    if number % 2 == 0:\n",
+    "        print(\"number is even\")\n",
+    "    else:\n",
+    "        print(\"number is odd\")\n",
+    "    return 0\n",
+    "print(is_even(8))\n",
+    "print(is_even(9))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6e265099-7573-44bf-8bcf-f08e0a7919b8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def find_max(a,b,c,d):\n",
+    "    return max(a,b,c,d)\n",
+    "print(find_max(10,20,30,40))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5fca8747-4f7b-40da-8f84-502c6f4cf810",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "def guess_the_number():\n",
+    "    number = random.randint(1,10)\n",
+    "    guess = int(input('enter a number to guess from 1 to 10:'))\n",
+    "    if guess==number:\n",
+    "     print(\"yes!your guess was correct\")\n",
+    "    else:\n",
+    "     print(f\"sorry! your guess was wrong\")\n",
+    "guess_the_number_()    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ad74a908-ae8f-4f77-8d4d-b240724ca4f5",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def roll_dice():\n",
+    "    input(\"press enter to roll your dice\")\n",
+    "    dice=random.randint(0,6)\n",
+    "    print(f\"you rolled a {dice}\")\n",
+    "roll_dice()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "659b6656-10ae-47d1-92f3-be9d928d0dd8",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import random\n",
+    "def roll_dice():\n",
+    "    return random.randint(1,6)\n",
+    "while True:\n",
+    "    input(\"press enter to roll your dice\")\n",
+    "    print(\"you rolled:\",roll_dice())\n",
+    "    again=input(\"roll again?(y/n)\")\n",
+    "    if again.lower() != 'y':\n",
+    "        break"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9b411cfe-6d98-4408-9823-9205f901ceaf",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import tkinter as tk\n",
+    "import random\n",
+    "def roll_dice():\n",
+    "    dice_value=random.randint(1,6)\n",
+    "    label_result.config(text=f\"you rolled: {dice_value}\")\n",
+    "    dice_label.config(text=dice_unicode[dice_value])\n",
+    "dice_unicode={\n",
+    "    1:\"\\u2680\",\n",
+    "    2:\"\\u2681\",\n",
+    "    3:\"\\u2682\",\n",
+    "    4:\"\\u2683\",\n",
+    "    5:\"\\u2684\",\n",
+    "    6:\"\\u2685\"\n",
+    "\n",
+    "}\n",
+    "root=tk.Tk()\n",
+    "root.title(\"Dice roller\")\n",
+    "root.geometry(\"300x200\")\n",
+    "\n",
+    "dice_label=tk.Label(root,text=\"\",font=(\"Helvetica\",100))\n",
+    "dice_label.pack()\n",
+    "\n",
+    "label_result=tk.Label(root,text=\"click to roll the dice!\",font=(\"Helvetica\",14))\n",
+    "label_result.pack(pady=10)\n",
+    "\n",
+    "roll_button=tk.Button(root,text=\"roll dice\",command=roll_dice,font=(\"Helvetica\",12))\n",
+    "roll_button.pack()\n",
+    "\n",
+    "root.mainloop()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "9bfb5bae-8b51-4344-a303-06b4e05478c1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "file1=input(\"enter a text:\")\n",
+    "file2=input(\"enter another text:\")\n",
+    "words_of_file1=file1.split()\n",
+    "print('words:',words_of_file1)\n",
+    "words_of_file2=file2.split()\n",
+    "print('words:',words_of_file2)\n",
+    "while True:\n",
+    "    if words_of_file1==words_of_file2:\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "0b647e7b-caad-449f-83b7-7110a28a728b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "I am Aliva Alokmala and I like pink\n",
+      "I am Aliva Alokmala and I am from Odisa\n",
+      "Similarity Percentage: 71.43%\n"
+     ]
+    }
+   ],
+   "source": [
+    "s1 = \"I am Aliva Alokmala and I like pink\"\n",
+    "s2 = \"I am Aliva Alokmala and I am from Odisa\"\n",
+    "print(s1)\n",
+    "print(s2)\n",
+    "\n",
+    "def similarity_compute(s1, s2):\n",
+    "    s1 = set(s1.split())\n",
+    "    s2 = set(s2.split())\n",
+    "    common_words = s1.intersection(s2)\n",
+    "    similarity_percentage = (len(common_words) / ((len(s1) + len(s2)) / 2)) * 100\n",
+    "    return similarity_percentage\n",
+    "\n",
+    "similarity_percentage = similarity_compute(s1, s2)\n",
+    "print(\"Similarity Percentage: {:.2f}%\".format(similarity_percentage))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ae058929-ad4e-4083-87b6-d490b3482fd4",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
